@@ -1,22 +1,12 @@
-import { ChangeEvent, FC, memo, useCallback, useState } from "react";
+import { ChangeEvent, FC, memo } from "react";
 import { SCREEN_TYPES, ScreenType } from "./utils";
 
-const ControlPanelBase: FC = () => {
-  const [selected, setSelected] = useState<ScreenType[]>(SCREEN_TYPES);
-  const handler = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      const { value, checked } = e.target;
+type ControlPanelProps = {
+  selected: ScreenType[];
+  handler: (e: ChangeEvent<HTMLInputElement>) => void;
+};
 
-      if (checked) {
-        const newValue = SCREEN_TYPES.find((s) => s.value === value);
-        newValue && setSelected([...selected, newValue]);
-      } else {
-        setSelected(selected.filter((s) => s.value !== value));
-      }
-    },
-    [selected],
-  );
-
+const ControlPanelBase: FC<ControlPanelProps> = ({ selected, handler }) => {
   const checkedState = (value: string) =>
     selected.some((s) => s.value === value);
   return (
