@@ -1,51 +1,46 @@
-import { FC, memo } from "react";
+import { ChangeEvent, FC, memo, useCallback, useState } from "react";
+import { SCREEN_TYPES, ScreenType } from "./utils";
 
 const ControlPanelBase: FC = () => {
+  const [selected, setSelected] = useState<ScreenType[]>(SCREEN_TYPES);
+  const handler = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      const { value, checked } = e.target;
+
+      if (checked) {
+        const newValue = SCREEN_TYPES.find((s) => s.value === value);
+        newValue && setSelected([...selected, newValue]);
+      } else {
+        setSelected(selected.filter((s) => s.value !== value));
+      }
+    },
+    [selected],
+  );
+
+  const checkedState = (value: string) =>
+    selected.some((s) => s.value === value);
   return (
     <div className="control-panel">
       <form action="">
         <h3>IMAX / Dolby 検索</h3>
       </form>
       <div className="forms" style={{ display: "flex", gap: "0.5rem" }}>
-        <form action="">
-          <div>
+        <form
+          style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+        >
+          {SCREEN_TYPES.map((ST) => (
             <div>
-              <input type="checkbox" name="imax" id="imax" />
-              <label htmlFor="imax">IMAX</label>
+              <input
+                type="checkbox"
+                name={ST.value}
+                id={ST.value}
+                value={ST.value}
+                onChange={handler}
+                checked={checkedState(ST.value)}
+              />
+              <label htmlFor={ST.value}>{ST.label}</label>
             </div>
-            <div style={{ paddingLeft: "0.5rem" }}>
-              <div>
-                <input type="checkbox" name="imax-digital" id="imax-digital" />
-                <label htmlFor="imax-digital">デジタル</label>
-              </div>
-              <div>
-                <input type="checkbox" name="imax-laser" id="imax-laser" />
-                <label htmlFor="imax-laser">レーザー</label>
-              </div>
-              <div>
-                <input type="checkbox" name="imax-gt" id="imax-gt" />
-                <label htmlFor="imax-gt">GT</label>
-              </div>
-            </div>
-          </div>
-        </form>
-        <form action="">
-          <div>
-            <div>
-              <input type="checkbox" name="dolby" id="dolby" />
-              <label htmlFor="dolby">Dolby</label>
-            </div>
-            <div style={{ paddingLeft: "0.5rem" }}>
-              <div>
-                <input type="checkbox" name="dolby-cinema" id="dolby-cinema" />
-                <label htmlFor="dolby-cinema">Cinema</label>
-              </div>
-              <div>
-                <input type="checkbox" name="dolby-atmos" id="dolby-atmos" />
-                <label htmlFor="dolby-atmos">Atmos</label>
-              </div>
-            </div>
-          </div>
+          ))}
         </form>
       </div>
     </div>
