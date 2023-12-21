@@ -281,10 +281,357 @@ const CinemaSunshine = [{
   position: { lat: 33.6297828, lng: 130.6829118 },
 }] satisfies TheaterPlace[];
 
+const AeonCinema = [{
+  label: "イオンシネマ 越谷レイクタウン",
+  url: "https://www.aeoncinema.com/theater/access/81508_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.8782992, lng: 139.8258387 },
+}, {
+  label: "イオンシネマ 新利府",
+  url: "https://www.aeoncinema.com/theater/access/81090_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 38.3251233, lng: 140.9688606 },
+}, {
+  label: "イオンシネマ シアタス調布",
+  url: "https://www.aeoncinema.com/theater/access/81084_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.6524623, lng: 139.5419677 },
+}, {
+  label: "イオンシネマ 市川妙典",
+  url: "https://www.aeoncinema.com/theater/access/81026_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.6925387, lng: 139.9267618 },
+}, {
+  label: "イオンシネマ 幕張新都心",
+  url: "https://www.aeoncinema.com/theater/access/81070_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.6550032, lng: 140.0299432 },
+}, {
+  label: "イオンシネマ 新潟南",
+  url: "https://www.aeoncinema.com/theater/access/81061_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 37.8772644, lng: 139.0827839 },
+}, {
+  label: "イオンシネマ となみ",
+  url: "https://www.aeoncinema.com/theater/access/81093_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 36.6415985, lng: 136.9479556 },
+}, {
+  label: "イオンシネマ 白山",
+  url: "https://www.aeoncinema.com/theater/access/81092_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 36.5434313, lng: 136.5806614 },
+}, {
+  label: "イオンシネマ 各務原",
+  url: "https://www.aeoncinema.com/theater/access/81060_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.3922249, lng: 136.821233 },
+}, {
+  label: "イオンシネマ 大高",
+  url: "https://www.aeoncinema.com/theater/access/81067_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 35.0530248, lng: 136.948559 },
+}, {
+  label: "イオンシネマ 名古屋茶屋",
+  url: "https://www.aeoncinema.com/theater/access/81073_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 35.1041244, lng: 136.8260025 },
+}, {
+  label: "イオンシネマ 京都桂川",
+  url: "https://www.aeoncinema.com/theater/access/81074_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 34.9621493, lng: 135.7070344 },
+}, {
+  label: "イオンシネマ 四條畷",
+  url: "https://www.aeoncinema.com/theater/access/81077_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 34.7455982, lng: 135.6276095 },
+}, {
+  label: "イオンシネマ シアタス心斎橋",
+  url: "https://www.aeoncinema.com/theater/access/81089_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 34.6738473, lng: 135.5009574 },
+}, {
+  label: "イオンシネマ 和歌山",
+  url: "https://www.aeoncinema.com/theater/access/81071_facility.html",
+  specs: [{
+    name: "dolby",
+    type: "dolby-atmos",
+  }],
+  position: { lat: 34.2764871, lng: 135.1488069 },
+}, {
+  label: "イオンシネマ 岡山",
+  url: "https://www.aeoncinema.com/theater/access/81075_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 34.6618117, lng: 133.9182647 },
+}, {
+  label: "イオンシネマ 福岡",
+  url: "https://www.aeoncinema.com/theater/access/81047_facility.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 33.5883581, lng: 130.4429995 },
+}] satisfies TheaterPlace[];
+
+const UnitedCinema = [{
+  label: "ユナイテッド・シネマ 岸和田",
+  url: "https://www.unitedcinemas.jp/kishiwada/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 34.4672823, lng: 135.3704295 },
+}, {
+  label: "ユナイテッド・シネマ 豊橋18",
+  url: "https://www.unitedcinemas.jp/toyohashi/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 34.7441622, lng: 137.3691138 },
+}, {
+  label: "ユナイテッド・シネマ 札幌",
+  url: "https://www.unitedcinemas.jp/sapporo/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 43.064133, lng: 141.3607852 },
+}, {
+  label: "ユナイテッド・シネマ 浦和",
+  url: "https://www.unitedcinemas.jp/urawa/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.8587143, lng: 139.6566056 },
+}, {
+  label: "ユナイテッド・シネマ テラスモール松戸",
+  url: "https://www.unitedcinemas.jp/matsudo/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.818273, lng: 139.9310702 },
+}, {
+  label: "ユナイテッド・シネマ としまえん",
+  url: "https://www.unitedcinemas.jp/toshimaen/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 35.7423973, lng: 139.645984 },
+}, {
+  label: "ユナイテッド・シネマ 金沢",
+  url: "https://www.unitedcinemas.jp/kanazawa/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 36.5896395, lng: 136.6561166 },
+}, {
+  label: "ユナイテッドシネマ キャナルシティ13",
+  url: "https://www.unitedcinemas.jp/canalcity/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 33.5891777, lng: 130.4083448 },
+}, {
+  label: "ユナイテッドシネマ PARCO CITY 浦添",
+  url: "https://www.unitedcinemas.jp/urasoe/about_facilities.html",
+  specs: [{
+    name: "imax",
+    type: "imax-laser",
+  }],
+  position: { lat: 26.2637022, lng: 127.6971891 },
+}] satisfies TheaterPlace[];
+
+const TJoy = [{
+  label: "T・ジョイ横浜",
+  url: "https://tjoy.jp/t-joy_yokohama/facilities",
+  specs: [{
+    name: "dolby",
+    type: "dolby-cinema",
+  }],
+  position: { lat: 35.4664463, lng: 139.4678199 },
+}, {
+  label: "横浜ブルク13",
+  url: "https://tjoy.jp/yokohama_burg13/facilities",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 35.452068, lng: 139.6306632 },
+}, {
+  label: "T・ジョイ梅田",
+  url: "https://tjoy.jp/t-joy_umeda/facilities",
+  specs: [{
+    name: "dolby",
+    type: "dolby-cinema",
+  }],
+  position: { lat: 34.7006768, lng: 135.4984927 },
+}, {
+  label: "Ｔ・ジョイ 博多",
+  url: "https://tjoy.jp/t-joy_hakata/facilities",
+  specs: [{
+    name: "dolby",
+    type: "dolby-cinema",
+  }],
+  position: { lat: 33.58981, lng: 130.2556366 },
+}, {
+  label: "新宿バルト9",
+  url: "https://tjoy.jp/shinjuku_wald9/facilities",
+  specs: [{
+    name: "dolby",
+    type: "dolby-cinema",
+  }],
+  position: { lat: 35.4662223, lng: 139.4678195 },
+}, {
+  label: "T・ジョイ PRINCE 品川",
+  url: "https://tjoy.jp/tjoy-prince-shinagawa/facilities",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 35.5502835, lng: 139.4286831 },
+}, {
+  label: "広島バルト11",
+  url: "https://tjoy.jp/hiroshima_wald11/facilities",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 34.394397, lng: 132.170065 },
+}, {
+  label: "鹿児島ミッテ10",
+  url: "https://tjoy.jp/kagoshima_mitte10/facilities",
+  specs: [{
+    name: "imax",
+    type: "imax-digital",
+  }],
+  position: { lat: 31.5849504, lng: 130.2133754 },
+}] satisfies TheaterPlace[];
+
+const OtherTheaters = [
+  {
+    label: "ミッドランドスクエア シネマ",
+    url: "http://www.midland-sq-cinema.jp/theater/",
+    specs: [{
+      name: "dolby",
+      type: "dolby-cinema",
+    }],
+    position: { lat: 35.169889, lng: 134.2484843 },
+  },
+  {
+    label: "丸の内ピカデリー",
+    url: "https://www.smt-cinema.com/site/marunouchi/facility.html",
+    specs: [{
+      name: "dolby",
+      type: "dolby-cinema",
+    }],
+    position: { lat: 35.6734305, lng: 139.4333347 },
+  },
+  {
+    label: "MOVIXさいたま",
+    url: "https://www.smt-cinema.com/site/saitama/facility.html",
+    specs: [{
+      name: "dolby",
+      type: "dolby-cinema",
+    }],
+    position: { lat: 35.5546332, lng: 139.0106955 },
+  },
+  {
+    label: "MOVIX 京都",
+    url: "https://www.smt-cinema.com/site/kyoto/facility.html",
+    specs: [{
+      name: "dolby",
+      type: "dolby-cinema",
+    }],
+    position: { lat: 35.0082553, lng: 135.4381268 },
+  },
+  {
+    label: "福山エーガル８シネマズ",
+    url: "https://www.furec.jp/theater/",
+    specs: [{
+      name: "imax",
+      type: "imax-digital",
+    }],
+    position: { lat: 34.5440385, lng: 133.0281724 },
+  },
+  {
+    label: "成田HUMAXシネマズ",
+    url: "https://www.humax-cinema.co.jp/narita/info/",
+    specs: [{
+      name: "imax",
+      type: "imax-digital",
+    }],
+    position: { lat: 35.7935865, lng: 139.9920804 },
+  },
+  {
+    label: "USシネマ ちはら台",
+    url: "https://uscinemas.jp/theater-guide/",
+    specs: [{
+      name: "imax",
+      type: "imax-digital",
+    }],
+    position: { lat: 35.5271569, lng: 139.8423888 },
+  },
+] satisfies TheaterPlace[];
+
 const places: TheaterPlace[] = [
   ...Toho,
   ...Cinemas109,
   ...CinemaSunshine,
+  ...AeonCinema,
+  ...UnitedCinema,
+  ...TJoy,
 ];
 
 export default places;
