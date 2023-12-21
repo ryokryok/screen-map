@@ -1,7 +1,7 @@
 import { AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
 import { FC, useState } from "react";
 import { TheaterPlace } from "./places";
-import { SCREEN_TYPES } from "./utils";
+import { formatTheaterSpecs } from "./utils";
 
 export const CustomMarker: FC<TheaterPlace> = (props) => {
   const [show, setShow] = useState(false);
@@ -23,16 +23,7 @@ export const CustomMarker: FC<TheaterPlace> = (props) => {
               {props.label}
             </a>
           </p>
-          <p>
-            {props.specs
-              .map(
-                (s) =>
-                  // convert value to label ex: imax-laser => IMAX レーザー
-                  SCREEN_TYPES.find((ST) => ST.value === s.type)?.label ??
-                  s.type
-              )
-              .join(", ")}
-          </p>
+          <p>{formatTheaterSpecs(props.specs)}</p>
         </InfoWindow>
       )}
       <AdvancedMarker
