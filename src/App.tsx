@@ -1,8 +1,9 @@
-import { APIProvider, InfoWindow, Map } from "@vis.gl/react-google-maps";
+import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { ControlPanel } from "./ControlPanel";
-import { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { places } from "./places";
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { TheaterPlace } from "./places";
 import { SCREEN_TYPES, ScreenType } from "./utils";
+import { CustomMarker } from "./CustomMarker";
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
@@ -19,31 +20,43 @@ const App = () => {
     }
   }, []);
 
+  const [places, setPlaces] = useState<TheaterPlace[] | null>(null);
+
+  // lazy load place data
+  useEffect(() => {
+    if (places !== null) return;
+
+    import("./places").then((res) => {
+      setPlaces(res.default);
+    });
+  }, [places]);
+
   const filteredPlaces = useMemo(
     () =>
-      places.filter((place) =>
+      places?.filter((place) =>
         selected.some((select) =>
           place.specs.some((p) => p.type === select.value)
         )
       ),
-    [selected],
+    [selected, places]
   );
 
   return (
     <APIProvider apiKey={API_KEY}>
-      <Map zoom={6} center={{ lat: 38, lng: 138 }} disableDefaultUI={true}>
-        {filteredPlaces.map((place) => (
-          <InfoWindow position={place.position}>
-            <p>
-              <a href={place.url} target="_blank" rel="noopener noreferrer">
-                {place.label}
-              </a>
-            </p>
-          </InfoWindow>
+      <Map
+        zoom={6}
+        center={{ lat: 38, lng: 138 }}
+        gestureHandling={"greedy"}
+        disableDefaultUI={true}
+        mapId={"screen-map"}
+      >
+        {filteredPlaces?.map((place) => (
+          <CustomMarker {...place} key={place.url} />
         ))}
       </Map>
       <ControlPanel selected={selected} handler={handler} />
     </APIProvider>
   );
 };
+
 export default App;

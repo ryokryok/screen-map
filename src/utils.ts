@@ -1,7 +1,7 @@
 export type ScreenType = {
   label: string;
   value: string;
-  group: string;
+  group: "imax" | "dolby" | "other";
 };
 
 export const SCREEN_TYPES: ScreenType[] = [
@@ -30,5 +30,15 @@ export const SCREEN_TYPES: ScreenType[] = [
     label: "Dolby Atmos",
     value: "dolby-atmos",
     group: "dolby",
+  },
+  {
+    label: "轟音",
+    value: "goon",
+    group: "other",
+  },
+  {
+    label: "TCX",
+    value: "tcx",
+    group: "other",
   },
 ] as const;
