@@ -1,7 +1,9 @@
+import { TheaterPlace } from "./places";
+
 export type ScreenType = {
   label: string;
   value: string;
-  group: string;
+  group: "imax" | "dolby" | "other";
 };
 
 export const SCREEN_TYPES: ScreenType[] = [
@@ -32,3 +34,16 @@ export const SCREEN_TYPES: ScreenType[] = [
     group: "dolby",
   },
 ] as const;
+
+export const formatTheaterSpecs = (
+  specs: TheaterPlace[
+    "specs"
+  ],
+): string => {
+  return specs.map(
+    (s) =>
+      // convert value to label ex: imax-laser => IMAX レーザー
+      SCREEN_TYPES.find((ST) => ST.value === s.type)?.label ??
+        s.type,
+  ).join(", ");
+};
