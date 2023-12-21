@@ -31,14 +31,4 @@ export const SCREEN_TYPES: ScreenType[] = [
     value: "dolby-atmos",
     group: "dolby",
   },
-  {
-    label: "轟音",
-    value: "goon",
-    group: "other",
-  },
-  {
-    label: "TCX",
-    value: "tcx",
-    group: "other",
-  },
 ] as const;
