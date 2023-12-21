@@ -41,7 +41,7 @@ const Toho = [{
     name: "other",
     type: "tcx",
   }],
-  position: { lat: 43.0551326, lng: 141.3501207 },
+  position: { lat: 43.0551326, lng: 141.3501261 },
 }, {
   label: "TOHOシネマズ 仙台",
   url: "https://www.tohotheater.jp/theater/078/institution.html",
@@ -55,7 +55,7 @@ const Toho = [{
     name: "other",
     type: "tcx",
   }],
-  position: { lat: 38.2588879, lng: 140.8766106 },
+  position: { lat: 38.2588879, lng: 140.876616 },
 }, {
   label: "TOHOシネマズ 日比谷",
   url: "https://www.tohotheater.jp/theater/081/institution05.html",
@@ -69,7 +69,7 @@ const Toho = [{
     name: "other",
     type: "tcx",
   }],
-  position: { lat: 35.6737436, lng: 139.7546701 },
+  position: { lat: 35.6733923, lng: 139.7571917 },
 }, {
   label: "TOHOシネマズ 新宿",
   url: "https://www.tohotheater.jp/theater/076/institution.html",
@@ -113,7 +113,7 @@ const Toho = [{
     name: "imax",
     type: "imax-digital",
   }],
-  position: { lat: 35.01027, lng: 135.7386423 },
+  position: { lat: 35.008193, lng: 135.738127 },
 }, {
   label: "TOHOシネマズ なんば 本館・別館",
   url: "https://www.tohotheater.jp/theater/032/institution.html",
@@ -131,13 +131,13 @@ const Toho = [{
   }],
   position: { lat: 35.8711334, lng: 139.9237868 },
 }, {
-  label: "TOHOシネマズ 西宮ＯＳ",
+  label: "TOHOシネマズ 西宮OS",
   url: "https://www.tohotheater.jp/theater/064/institution.html",
   specs: [{
     name: "imax",
     type: "imax-laser",
   }],
-  position: { lat: 34.7436807, lng: 135.3582608 },
+  position: { lat: 34.74373, lng: 135.359382 },
 }, {
   label: "TOHOシネマズ ららぽーと門真",
   url: "https://www.tohotheater.jp/theater/088/institution.html",
@@ -151,7 +151,7 @@ const Toho = [{
     name: "other",
     type: "tcx",
   }],
-  position: { lat: 34.730729, lng: 135.5815636 },
+  position: { lat: 34.735614, lng: 135.574359 },
 }] satisfies TheaterPlace[];
 
 const Cinemas109 = [{
@@ -185,7 +185,7 @@ const Cinemas109 = [{
     name: "imax",
     type: "imax-laser",
   }],
-  position: { lat: 35.6110776, lng: 139.6270923 },
+  position: { lat: 35.611111, lng: 139.626051 },
 }, {
   label: "109シネマズグランベリーパーク",
   url: "https://109cinemas.net/grandberrypark/establishment.html",
@@ -225,7 +225,7 @@ const Cinemas109 = [{
     name: "imax",
     type: "imax-digital",
   }],
-  position: { lat: 34.8320917, lng: 135.4855504 },
+  position: { lat: 34.831675, lng: 135.484977 },
 }] satisfies TheaterPlace[];
 
 const CinemaSunshine = [{
@@ -278,7 +278,7 @@ const CinemaSunshine = [{
     name: "imax",
     type: "imax-laser",
   }, { name: "dolby", type: "dolby-atmos" }],
-  position: { lat: 33.6297828, lng: 130.6829118 },
+  position: { lat: 33.6283678, lng: 130.6823366 },
 }] satisfies TheaterPlace[];
 
 const AeonCinema = [{
@@ -416,7 +416,7 @@ const AeonCinema = [{
     name: "imax",
     type: "imax-laser",
   }],
-  position: { lat: 33.5883581, lng: 130.4429995 },
+  position: { lat: 33.594248, lng: 130.481276 },
 }] satisfies TheaterPlace[];
 
 const UnitedCinema = [{
@@ -482,7 +482,7 @@ const UnitedCinema = [{
     name: "imax",
     type: "imax-laser",
   }],
-  position: { lat: 33.5891777, lng: 130.4083448 },
+  position: { lat: 33.5906862, lng: 130.407459 },
 }, {
   label: "ユナイテッドシネマ PARCO CITY 浦添",
   url: "https://www.unitedcinemas.jp/urasoe/about_facilities.html",
@@ -500,7 +500,7 @@ const TJoy = [{
     name: "dolby",
     type: "dolby-cinema",
   }],
-  position: { lat: 35.4664463, lng: 139.4678199 },
+  position: { lat: 35.4667828, lng: 139.6197513 },
 }, {
   label: "横浜ブルク13",
   url: "https://tjoy.jp/yokohama_burg13/facilities",
@@ -524,7 +524,7 @@ const TJoy = [{
     name: "dolby",
     type: "dolby-cinema",
   }],
-  position: { lat: 33.58981, lng: 130.2556366 },
+  position: { lat: 33.58981, lng: 130.4204315 },
 }, {
   label: "新宿バルト9",
   url: "https://tjoy.jp/shinjuku_wald9/facilities",
@@ -532,7 +532,7 @@ const TJoy = [{
     name: "dolby",
     type: "dolby-cinema",
   }],
-  position: { lat: 35.4662223, lng: 139.4678195 },
+  position: { lat: 35.6901521, lng: 139.7033176 },
 }, {
   label: "T・ジョイ PRINCE 品川",
   url: "https://tjoy.jp/tjoy-prince-shinagawa/facilities",
@@ -540,7 +540,7 @@ const TJoy = [{
     name: "imax",
     type: "imax-digital",
   }],
-  position: { lat: 35.5502835, lng: 139.4286831 },
+  position: { lat: 35.6280946, lng: 139.7332093 },
 }, {
   label: "広島バルト11",
   url: "https://tjoy.jp/hiroshima_wald11/facilities",
@@ -548,7 +548,7 @@ const TJoy = [{
     name: "imax",
     type: "imax-digital",
   }],
-  position: { lat: 34.394397, lng: 132.170065 },
+  position: { lat: 34.394397, lng: 132.4996548 },
 }, {
   label: "鹿児島ミッテ10",
   url: "https://tjoy.jp/kagoshima_mitte10/facilities",
@@ -556,7 +556,7 @@ const TJoy = [{
     name: "imax",
     type: "imax-digital",
   }],
-  position: { lat: 31.5849504, lng: 130.2133754 },
+  position: { lat: 31.5849504, lng: 130.5429652 },
 }] satisfies TheaterPlace[];
 
 const OtherTheaters = [
@@ -567,7 +567,7 @@ const OtherTheaters = [
       name: "dolby",
       type: "dolby-cinema",
     }],
-    position: { lat: 35.169889, lng: 134.2484843 },
+    position: { lat: 35.169889, lng: 136.8804394 },
   },
   {
     label: "丸の内ピカデリー",
@@ -576,7 +576,7 @@ const OtherTheaters = [
       name: "dolby",
       type: "dolby-cinema",
     }],
-    position: { lat: 35.6734305, lng: 139.4333347 },
+    position: { lat: 35.6734963, lng: 139.7606859 },
   },
   {
     label: "MOVIXさいたま",
@@ -585,7 +585,7 @@ const OtherTheaters = [
       name: "dolby",
       type: "dolby-cinema",
     }],
-    position: { lat: 35.5546332, lng: 139.0106955 },
+    position: { lat: 35.8948441, lng: 139.6336403 },
   },
   {
     label: "MOVIX 京都",
@@ -594,7 +594,7 @@ const OtherTheaters = [
       name: "dolby",
       type: "dolby-cinema",
     }],
-    position: { lat: 35.0082553, lng: 135.4381268 },
+    position: { lat: 35.0082553, lng: 135.7651417 },
   },
   {
     label: "福山エーガル８シネマズ",
@@ -603,7 +603,7 @@ const OtherTheaters = [
       name: "imax",
       type: "imax-digital",
     }],
-    position: { lat: 34.5440385, lng: 133.0281724 },
+    position: { lat: 34.544233, lng: 133.357454 },
   },
   {
     label: "成田HUMAXシネマズ",
@@ -612,7 +612,7 @@ const OtherTheaters = [
       name: "imax",
       type: "imax-digital",
     }],
-    position: { lat: 35.7935865, lng: 139.9920804 },
+    position: { lat: 35.7935865, lng: 140.3190953 },
   },
   {
     label: "USシネマ ちはら台",
@@ -621,7 +621,7 @@ const OtherTheaters = [
       name: "imax",
       type: "imax-digital",
     }],
-    position: { lat: 35.5271569, lng: 139.8423888 },
+    position: { lat: 35.5271569, lng: 140.1694037 },
   },
 ] satisfies TheaterPlace[];
 
