@@ -281,8 +281,10 @@ const CinemaSunshine = [{
   position: { lat: 33.6297828, lng: 130.6829118 },
 }] satisfies TheaterPlace[];
 
-export const places: TheaterPlace[] = [
+const places: TheaterPlace[] = [
   ...Toho,
   ...Cinemas109,
   ...CinemaSunshine,
 ];
+
+export default places;
