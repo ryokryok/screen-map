@@ -4,6 +4,7 @@ import { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { TheaterPlace } from "./places";
 import { SCREEN_TYPES, ScreenType } from "./utils";
 import { CustomMarker } from "./CustomMarker";
+import { Author } from "./Author";
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
@@ -38,7 +39,7 @@ const App = () => {
           place.specs.some((p) => p.type === select.value)
         )
       ),
-    [selected, places]
+    [selected, places],
   );
 
   return (
@@ -54,6 +55,7 @@ const App = () => {
           <CustomMarker {...place} key={place.url} />
         ))}
       </Map>
+      <Author />
       <ControlPanel selected={selected} handler={handler} />
     </APIProvider>
   );
