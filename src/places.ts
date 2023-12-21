@@ -632,6 +632,7 @@ const places: TheaterPlace[] = [
   ...AeonCinema,
   ...UnitedCinema,
   ...TJoy,
+  ...OtherTheaters,
 ];
 
 export default places;
