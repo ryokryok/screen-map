@@ -35,15 +35,12 @@ export const SCREEN_TYPES: ScreenType[] = [
   },
 ] as const;
 
-export const formatTheaterSpecs = (
-  specs: TheaterPlace[
-    "specs"
-  ],
-): string => {
-  return specs.map(
-    (s) =>
-      // convert value to label ex: imax-laser => IMAX レーザー
-      SCREEN_TYPES.find((ST) => ST.value === s.type)?.label ??
-        s.type,
-  ).join(", ");
+export const formatTheaterSpecs = (specs: TheaterPlace["specs"]): string => {
+  return specs
+    .map(
+      (s) =>
+        // convert value to label ex: imax-laser => IMAX レーザー
+        SCREEN_TYPES.find((ST) => ST.value === s.type)?.label ?? s.type,
+    )
+    .join(", ");
 };

@@ -36,10 +36,10 @@ const App = () => {
     () =>
       places?.filter((place) =>
         selected.some((select) =>
-          place.specs.some((p) => p.type === select.value)
-        )
+          place.specs.some((p) => p.type === select.value),
+        ),
       ),
-    [selected, places],
+    [places, selected],
   );
 
   return (
