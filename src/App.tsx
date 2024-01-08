@@ -39,7 +39,7 @@ const App = () => {
           place.specs.some((p) => p.type === select.value)
         )
       ),
-    [selected, places],
+    [places, selected]
   );
 
   return (
