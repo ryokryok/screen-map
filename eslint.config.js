@@ -4,6 +4,7 @@ import tsLint from "@typescript-eslint/eslint-plugin";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import prettier from "eslint-plugin-prettier";
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
@@ -22,6 +23,7 @@ export default [
       "@typescript-eslint": tsLint,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      prettier: prettier,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -31,6 +33,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
+      ...prettier.configs.recommended.rules,
     },
   },
 ];
