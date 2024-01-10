@@ -5,13 +5,15 @@ import tsLint from "@typescript-eslint/eslint-plugin";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import prettier from "eslint-plugin-prettier";
+import prettier from "eslint-config-prettier";
 import eslintImport from "eslint-plugin-import";
 
 export default defineFlatConfig([
   {
-    ignores: ["./dist"],
+    ignores: ["dist"],
   },
+  js.configs.recommended,
+  prettier,
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -24,7 +26,6 @@ export default defineFlatConfig([
       "@typescript-eslint": tsLint,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      prettier: prettier,
       import: eslintImport,
     },
     settings: {
@@ -37,7 +38,6 @@ export default defineFlatConfig([
       },
     },
     rules: {
-      ...js.configs.recommended.rules,
       ...tsLint.configs["recommended"].rules,
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
@@ -46,7 +46,6 @@ export default defineFlatConfig([
       ],
       ...eslintImport.configs["recommended"].rules,
       "import/order": [2, { alphabetize: { order: "asc" } }],
-      ...prettier.configs.recommended.rules,
     },
   },
 ]);
