@@ -1,10 +1,10 @@
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-import { ControlPanel } from "./ControlPanel";
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { Author } from "./Author";
+import { ControlPanel } from "./ControlPanel";
+import { CustomMarker } from "./CustomMarker";
 import { TheaterPlace } from "./places";
 import { SCREEN_TYPES, ScreenType } from "./utils";
-import { CustomMarker } from "./CustomMarker";
-import { Author } from "./Author";
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
