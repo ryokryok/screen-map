@@ -5,14 +5,14 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-plugin-prettier";
+import { defineFlatConfig } from "eslint-define-config";
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
-export default [
+export default defineFlatConfig([
   {
     ignores: ["./dist"],
   },
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
@@ -36,4 +36,4 @@ export default [
       ...prettier.configs.recommended.rules,
     },
   },
-];
+]);
